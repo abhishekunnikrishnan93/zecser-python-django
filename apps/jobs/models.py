@@ -1,5 +1,5 @@
 from django.db import models
-from accounts.models import Employer, Candidate
+from apps.accounts.models import Employer, Candidate
 class Job(models.Model):
     STATUS_CHOICES = [
         ('open', 'Open'),
