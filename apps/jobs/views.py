@@ -18,6 +18,6 @@ class JobCreateAPI(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class UserTestAPI(APIView):
+class HealthCheckAPI(APIView):
     def get(self, request):
-        return Response({"message": "API is working"}, status=status.HTTP_200_OK)
+        return Response({"status": "ok"}, status=status.HTTP_200_OK)
